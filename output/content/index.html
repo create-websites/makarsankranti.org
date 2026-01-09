@@ -2,35 +2,22 @@
 <html lang="en"><head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>MakarSankranti - Cards, Information, Wishes &amp; Messages</title>
-    <meta content="Makar Sankranti 2026 cards, wishes, and information. Download wallpapers and explore the history and rituals of the festival." name="description"/>
-    
+    <title>MakarSankranti - Cards, Wallpapers, Wishes,Quotes, Food &amp; Messages</title>
+    <meta content="Makar Sankranti 2026 cards, wishes, stories and food traditions. Download wallpapers and explore the history, rituals, and meaning of the festival." name="description"/>
+    <meta content="Makar Sankranti 2026, Uttarayan, wallpapers, cards, wishes, messages, stories, myths, Surya Shani, Bhishma, Bhagirath Ganga, tilgul, sesame jaggery, Sankranti food" name="keywords"/>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        .card-zoom {
-            transition: transform 0.3s ease;
-        }
-        .card-zoom:hover {
-            transform: scale(1.02);
-        }
+        .card-zoom { transition: transform 0.3s ease; }
+        .card-zoom:hover { transform: scale(1.02); }
         /* Masonry Grid Layout */
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 1rem;
-        }
-        @media (min-width: 640px) {
-            .masonry-grid { column-count: 2; }
-        }
-        @media (min-width: 1024px) {
-            .masonry-grid { column-count: 3; }
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-        }
+        .masonry-grid { column-count: 1; column-gap: 1rem; }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
+        .anchor-offset { scroll-margin-top: 92px; }
     </style>
 </head>
 <body class="min-h-screen bg-green-50 font-sans text-stone-800">
@@ -42,13 +29,13 @@
                 <span>MakarSankranti.org</span>
             </a>
             <div class="hidden md:flex space-x-6 font-medium">
-                <a class="hover:text-yellow-200 transition" href="index.html">Home</a>
-                <a class="hover:text-yellow-200 transition" href="faq.html">FAQ</a>
-                <a class="hover:text-yellow-200 transition" href="greetings.html">Greetings</a>
-                <a class="hover:text-yellow-200 transition" href="indian-festivals.html">Indian Festivals</a>
-                <a class="hover:text-yellow-200 transition" href="messages.html">Messages</a>
+                <a class="hover:text-yellow-200 transition" href="~">Home</a>
+                <a class="hover:text-yellow-200 transition" href="makarsakranti-faq.html">FAQ</a>
+                <a class="hover:text-yellow-200 transition" href="quotes/">Greetings</a>
+                <a class="hover:text-yellow-200 transition" href="makasankranti-wallpapers.html">Images</a>
+                <a class="hover:text-yellow-200 transition" href="wishes/">Messages</a>
             </div>
-            <button class="md:hidden text-white">
+            <button aria-label="Open menu" class="md:hidden text-white">
                 <i class="h-6 w-6" data-lucide="menu"></i>
             </button>
         </div>
@@ -57,23 +44,191 @@
     <header class="bg-gradient-to-r from-emerald-600 to-yellow-500 text-white py-12 px-4 text-center relative overflow-hidden">
         <div class="relative z-10 max-w-4xl mx-auto">
             <h1 class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-md">Makar Sankranti Cards &amp; Wishes</h1>
-            <p class="text-emerald-50 text-lg md:text-xl font-medium">Explore beautiful wallpapers, greetings, and the rich history of the festival.</p>
+            <p class="text-emerald-50 text-lg md:text-xl font-medium">Explore wallpapers, wishes, stories, and festive food traditions.</p>
+
+            <div class="mt-6 flex flex-wrap gap-3 justify-center">
+                <a class="inline-flex items-center px-5 py-2.5 rounded-full bg-white/95 text-emerald-800 font-bold shadow hover:bg-white transition" href="#wishes">
+                    <i class="w-5 h-5 mr-2" data-lucide="sparkles"></i> Wishes
+                </a>
+                <a class="inline-flex items-center px-5 py-2.5 rounded-full bg-white/95 text-emerald-800 font-bold shadow hover:bg-white transition" href="#stories">
+                    <i class="w-5 h-5 mr-2" data-lucide="book-open"></i> Stories
+                </a>
+                <a class="inline-flex items-center px-5 py-2.5 rounded-full bg-white/95 text-emerald-800 font-bold shadow hover:bg-white transition" href="#food">
+                    <i class="w-5 h-5 mr-2" data-lucide="utensils"></i> Food
+                </a>
+            </div>
         </div>
         <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]"></div>
     </header>
 
     <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
-        
+
         <main class="w-full lg:w-3/4">
+            <!-- Gallery -->
             <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500 mb-8">
                 <h2 class="text-xl font-bold text-emerald-800 mb-2 flex items-center">
                     <i class="mr-2" data-lucide="image"></i> Gallery
                 </h2>
                 <p class="text-stone-600 mb-4">Click on any thumbnail to view the full resolution wallpaper and download it.</p>
-                
-                <div class="masonry-grid" id="gallery-container">
-                    </div>
+                <div class="masonry-grid" id="gallery-container"></div>
             </div>
+
+            <!-- NEW: Wishes Section -->
+            <section class="anchor-offset bg-white rounded-xl shadow-md p-6 border-l-4 border-emerald-600 mb-8" id="wishes">
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-emerald-800 mb-1 flex items-center">
+                            <i class="mr-2" data-lucide="sparkles"></i> Wishes for Makar Sankranti &amp; Uttarayan
+                        </h2>
+                        <p class="text-stone-600">Tap any wish to copy it.</p>
+                    </div>
+                    <button class="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-emerald-600 text-white font-bold shadow hover:bg-emerald-500 transition" onclick="copyAllWishes()">
+                        <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy all
+                    </button>
+                </div>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                        <h3 class="font-extrabold text-emerald-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="sun"></i> Makar Sankranti</h3>
+                        <div class="mt-3 space-y-3">
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-emerald-100 hover:shadow transition" data-text="May the Sun bless your life with new energy, good health, and success." onclick="copyWish(this)">1. May the Sun bless your life with new energy, good health, and success.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-emerald-100 hover:shadow transition" data-text="May this Makar Sankranti bring sweetness in words and warmth in relationships." onclick="copyWish(this)">2. May this Makar Sankranti bring sweetness in words and warmth in relationships.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-emerald-100 hover:shadow transition" data-text="As the Sun changes direction, may your life turn toward hope and happiness." onclick="copyWish(this)">3. As the Sun changes direction, may your life turn toward hope and happiness.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-emerald-100 hover:shadow transition" data-text="May all darkness fade and your days shine with knowledge and positivity." onclick="copyWish(this)">4. May all darkness fade and your days shine with knowledge and positivity.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-emerald-100 hover:shadow transition" data-text="Wishing you a harvest of peace, prosperity, and harmony." onclick="copyWish(this)">5. Wishing you a harvest of peace, prosperity, and harmony.</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-5">
+                        <h3 class="font-extrabold text-yellow-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="kite"></i> Uttarayan</h3>
+                        <div class="mt-3 space-y-3">
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-yellow-100 hover:shadow transition" data-text="May your dreams soar as high as colorful kites in the sky." onclick="copyWish(this)">1. May your dreams soar as high as colorful kites in the sky.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-yellow-100 hover:shadow transition" data-text="May the longer days bring new beginnings and bright opportunities." onclick="copyWish(this)">2. May the longer days bring new beginnings and bright opportunities.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-yellow-100 hover:shadow transition" data-text="Let go of worries and let your hopes rise with the Sun." onclick="copyWish(this)">3. Let go of worries and let your hopes rise with the Sun.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-yellow-100 hover:shadow transition" data-text="May joy, freedom, and laughter fill your life this Uttarayan." onclick="copyWish(this)">4. May joy, freedom, and laughter fill your life this Uttarayan.</button>
+                            <button class="w-full text-left bg-white rounded-lg p-4 shadow-sm border border-yellow-100 hover:shadow transition" data-text="Wishing you health, warmth, and endless optimism." onclick="copyWish(this)">5. Wishing you health, warmth, and endless optimism.</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex sm:hidden">
+                    <button class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-emerald-600 text-white font-bold shadow hover:bg-emerald-500 transition" onclick="copyAllWishes()">
+                        <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy all wishes
+                    </button>
+                </div>
+
+                <p class="mt-3 text-sm text-emerald-700 hidden" id="wishes-toast">Copied!</p>
+            </section>
+
+            <!-- NEW: Stories Section -->
+            <section class="anchor-offset bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500 mb-8" id="stories">
+                <h2 class="text-xl font-bold text-emerald-800 mb-1 flex items-center">
+                    <i class="mr-2" data-lucide="book-open"></i> Stories behind Makar Sankranti
+                </h2>
+                <p class="text-stone-600">Myths and legends that explain why this day is seen as a powerful turning point from darkness to light.</p>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <article class="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                        <h3 class="font-extrabold text-emerald-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="shield"></i> Bhishma and the “Path of Light”</h3>
+                        <p class="mt-2 text-stone-700 text-sm leading-relaxed">
+                            In the Mahabharata, Bhishma used his boon of choosing the time of death to wait for Uttarayana. The belief is that departing during Uttarayana is especially auspicious, symbolizing liberation and spiritual progress.
+                        </p>
+                        <button class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-white text-emerald-800 font-bold border border-emerald-200 hover:bg-emerald-100 transition" data-text="Bhishma waited for Uttarayana to depart, symbolizing an auspicious ‘path of light’ and spiritual liberation." onclick="copyStory(this)">
+                            <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy 1-line summary
+                        </button>
+                    </article>
+
+                    <article class="bg-yellow-50 border border-yellow-100 rounded-xl p-5">
+                        <h3 class="font-extrabold text-yellow-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="waves"></i> Bhagirath and the descent of Ganga</h3>
+                        <p class="mt-2 text-stone-700 text-sm leading-relaxed">
+                            The story of King Bhagirath explains the tradition of holy bathing: through intense penance, he brought the river Ganga to Earth to purify and liberate his ancestors.
+                        </p>
+                        <button class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-white text-yellow-800 font-bold border border-yellow-200 hover:bg-yellow-100 transition" data-text="Bhagirath’s penance brought Ganga to Earth, inspiring the holy bath tradition for purification and liberation." onclick="copyStory(this)">
+                            <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy 1-line summary
+                        </button>
+                    </article>
+
+                    <article class="bg-white border border-stone-200 rounded-xl p-5">
+                        <h3 class="font-extrabold text-stone-900 flex items-center gap-2"><i class="w-5 h-5" data-lucide="handshake"></i> Surya meets Shani</h3>
+                        <p class="mt-2 text-stone-700 text-sm leading-relaxed">
+                            Makar Sankranti marks the Sun’s entry into Capricorn (ruled by Saturn/Shani). The story is told as Surya visiting Shani — a symbol of reconciliation. This idea lives on in sharing til-gud (tilgul) and speaking sweetly.
+                        </p>
+                        <button class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-stone-900 text-white font-bold hover:bg-stone-800 transition" data-text="Surya’s visit to Shani symbolizes reconciliation; til-gud (tilgul) reminds us to ‘speak sweetly’ and begin anew." onclick="copyStory(this)">
+                            <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy 1-line summary
+                        </button>
+                    </article>
+
+                    <article class="bg-emerald-50 border border-emerald-100 rounded-xl p-5">
+                        <h3 class="font-extrabold text-emerald-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="sparkle"></i> Goddess Sankranti and the victory of good</h3>
+                        <p class="mt-2 text-stone-700 text-sm leading-relaxed">
+                            Regional lore speaks of Goddess Sankranti defeating negativity and restoring harmony — mirroring the festival’s message of renewal and positive change.
+                        </p>
+                        <button class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-white text-emerald-800 font-bold border border-emerald-200 hover:bg-emerald-100 transition" data-text="Goddess Sankranti’s victory represents renewal: letting go of negativity and welcoming good change." onclick="copyStory(this)">
+                            <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy 1-line summary
+                        </button>
+                    </article>
+                </div>
+
+                <p class="mt-3 text-sm text-emerald-700 hidden" id="stories-toast">Copied!</p>
+            </section>
+
+            <!-- NEW: Food Section -->
+            <section class="anchor-offset bg-white rounded-xl shadow-md p-6 border-l-4 border-emerald-600 mb-8" id="food">
+                <h2 class="text-xl font-bold text-emerald-800 mb-1 flex items-center">
+                    <i class="mr-2" data-lucide="utensils"></i> Food for Makar Sankranti: meaning &amp; favorites
+                </h2>
+                <p class="text-stone-600">Why til (sesame) and jaggery matter — plus must-try dishes across regions.</p>
+
+                <div class="mt-5 grid gap-4 md:grid-cols-3">
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-5 card-zoom">
+                        <h3 class="font-extrabold text-emerald-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="leaf"></i> Til (Sesame)</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-stone-700">
+                            <li class="flex gap-2"><i class="w-4 h-4 text-emerald-700 mt-0.5" data-lucide="check"></i><span>Symbol of resilience (grows in harsh conditions)</span></li>
+                            <li class="flex gap-2"><i class="w-4 h-4 text-emerald-700 mt-0.5" data-lucide="check"></i><span>Considered pure and sacred in rituals</span></li>
+                            <li class="flex gap-2"><i class="w-4 h-4 text-emerald-700 mt-0.5" data-lucide="check"></i><span>Creates warmth in the body during winter</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-5 card-zoom">
+                        <h3 class="font-extrabold text-yellow-800 flex items-center gap-2"><i class="w-5 h-5" data-lucide="droplet"></i> Jaggery (Gud)</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-stone-700">
+                            <li class="flex gap-2"><i class="w-4 h-4 text-yellow-700 mt-0.5" data-lucide="check"></i><span>Natural, unrefined sweetness</span></li>
+                            <li class="flex gap-2"><i class="w-4 h-4 text-yellow-700 mt-0.5" data-lucide="check"></i><span>Symbol of sweet speech and relationships</span></li>
+                            <li class="flex gap-2"><i class="w-4 h-4 text-yellow-700 mt-0.5" data-lucide="check"></i><span>Gives energy after cold months</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-stone-200 rounded-xl p-5 card-zoom">
+                        <h3 class="font-extrabold text-stone-900 flex items-center gap-2"><i class="w-5 h-5" data-lucide="heart"></i> Together: Til + Gud</h3>
+                        <p class="mt-3 text-sm text-stone-700 leading-relaxed">
+                            Til + Gud carries a message: <span class="font-semibold">“Stay warm, stay strong, and speak sweetly—even in difficult times.”</span>
+                            That’s why people exchange tilgul and say: <span class="font-semibold">“Tilgul ghya, god god bola.”</span>
+                        </p>
+                        <button class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-emerald-600 text-white font-bold shadow hover:bg-emerald-500 transition" onclick="copyFoodLine()">
+                            <i class="w-4 h-4 mr-2" data-lucide="copy"></i> Copy message
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="bg-stone-50 border border-stone-200 rounded-xl p-5">
+                        <div class="font-extrabold text-stone-900">Tilgul / Til laddoo</div>
+                        <p class="mt-2 text-sm text-stone-700">Classic sesame-jaggery sweets for warmth &amp; goodwill.</p>
+                    </div>
+                    <div class="bg-stone-50 border border-stone-200 rounded-xl p-5">
+                        <div class="font-extrabold text-stone-900">Chikki</div>
+                        <p class="mt-2 text-sm text-stone-700">Crunchy jaggery brittle (peanut/sesame).</p>
+                    </div>
+                    <div class="bg-stone-50 border border-stone-200 rounded-xl p-5">
+                        <div class="font-extrabold text-stone-900">Undhiyu</div>
+                        <p class="mt-2 text-sm text-stone-700">Gujarati winter special often served during Uttarayan.</p>
+                    </div>
+                    <div class="bg-stone-50 border border-stone-200 rounded-xl p-5">
+                        <div class="font-extrabold text-stone-900">Pongal / Khichdi</div>
+                        <p class="mt-2 text-sm text-stone-700">Harvest comfort foods served across regions.</p>
+                    </div>
+                </div>
+
+                <p class="mt-3 text-sm text-emerald-700 hidden" id="food-toast">Copied!</p>
+            </section>
         </main>
 
         <aside class="w-full lg:w-1/4">
@@ -105,6 +260,42 @@
                         </a>
                     </li>
                     <li>
+                        <a class="flex items-center text-stone-600 hover:text-emerald-600 transition group" href="maghe-sankranti-in-nepal.html">
+                            <i class="w-4 h-4 mr-2 text-yellow-500 group-hover:text-emerald-500" data-lucide="chevron-right"></i>
+                            Maghe Sankranti in Nepal
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center text-stone-600 hover:text-emerald-600 transition group" href="uttarayan.html">
+                            <i class="w-4 h-4 mr-2 text-yellow-500 group-hover:text-emerald-500" data-lucide="chevron-right"></i>
+                            Uttarayan Gujarat
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mt-8 pt-6 border-t border-stone-100">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-2">Jump to</h3>
+                    <div class="space-y-2">
+                        <a class="inline-flex items-center text-stone-600 hover:text-emerald-600 transition" href="#wishes"><i class="w-4 h-4 mr-2 text-yellow-500" data-lucide="sparkles"></i> Wishes</a>
+                        <a class="inline-flex items-center text-stone-600 hover:text-emerald-600 transition" href="#stories"><i class="w-4 h-4 mr-2 text-yellow-500" data-lucide="book-open"></i> Stories</a>
+                        <a class="inline-flex items-center text-stone-600 hover:text-emerald-600 transition" href="#food"><i class="w-4 h-4 mr-2 text-yellow-500" data-lucide="utensils"></i> Food</a>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-stone-100">
+                    <h3 class="text-lg font-bold text-emerald-800 mb-2">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a aria-label="Facebook" class="text-stone-400 hover:text-blue-600 transition" href="https://www.facebook.com/kreatewebsites/"><i data-lucide="facebook"></i></a>
+                        <a aria-label="Twitter" class="text-stone-400 hover:text-sky-500 transition" href="https://twitter.com/indiacitytrip/"><i data-lucide="twitter"></i></a>
+                        <a aria-label="Instagram" class="text-stone-400 hover:text-pink-600 transition" href="https://www.instagram.com/dataknobs/"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+			
+			            <div class="bg-white rounded-xl shadow-md p-6 sticky top-24">
+                <h3 class="text-lg font-bold text-emerald-800 mb-4 border-b pb-2">Wishes and Quotes</h3>
+                <ul class="space-y-3">
+                   <li>
                         <a class="flex items-center text-stone-600 hover:text-emerald-600 transition group" href="maghe-sankranti-in-nepal.html">
                             <i class="w-4 h-4 mr-2 text-yellow-500 group-hover:text-emerald-500" data-lucide="chevron-right"></i>
                             Maghe Sankranti in Nepal
@@ -171,23 +362,13 @@
                             Bihari - Sankranti and Bihu Wishes
                         </a>
                     </li>
-					
-                    <li>
-                        <a class="flex items-center text-stone-600 hover:text-emerald-600 transition group" href="hindu-festival-calendar.html">
-                            <i class="w-4 h-4 mr-2 text-yellow-500 group-hover:text-emerald-500" data-lucide="chevron-right"></i>
-                            Hindu Festival Calendar
-                        </a>
-                    </li>
+				   
+				   
                 </ul>
 
-                <div class="mt-8 pt-6 border-t border-stone-100">
-                    <h3 class="text-lg font-bold text-emerald-800 mb-2">Connect</h3>
-                    <div class="flex space-x-4">
-                        <a class="text-stone-400 hover:text-blue-600 transition" href="https://www.facebook.com/kreatewebsites/"><i data-lucide="facebook"></i></a>
-                        <a class="text-stone-400 hover:text-sky-500 transition" href="https://twitter.com/indiacitytrip/"><i data-lucide="twitter"></i></a>
-                        <a class="text-stone-400 hover:text-pink-600 transition" href="https://www.instagram.com/dataknobs/"><i data-lucide="instagram"></i></a>
-                    </div>
-                </div>
+               
+
+                
             </div>
         </aside>
 
@@ -336,14 +517,13 @@
 </div>
 </footer>
 
+    <!-- Modal -->
     <div class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm" id="modal" onclick="closeModal()">
         <div class="relative max-w-5xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
-            <button class="absolute -top-12 right-0 text-white hover:text-emerald-400 transition p-2" onclick="closeModal()">
+            <button aria-label="Close" class="absolute -top-12 right-0 text-white hover:text-emerald-400 transition p-2" onclick="closeModal()">
                 <i class="w-10 h-10" data-lucide="x"></i>
             </button>
-            
             <img alt="Full size wallpaper" class="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl border border-stone-700" id="modal-img" src=""/>
-            
             <div class="mt-6">
                 <a class="flex items-center px-8 py-3 bg-emerald-600 text-white rounded-full hover:bg-emerald-500 transition font-bold shadow-lg text-lg transform hover:scale-105" download="makar-sankranti-wallpaper.png" href="" id="download-btn">
                     <i class="w-6 h-6 mr-2" data-lucide="download"></i> Download Full Wallpaper
@@ -356,8 +536,7 @@
         // Initialize Icons
         lucide.createIcons();
 
-        // Image Data: Mapping Thumbnails (400w) to Full Resolutions based on provided file
-        // [cite: 3-12] (Thumbnails) mapped to [cite: 15-24] (Full Res)
+        // Wallpapers
         const wallpaperData = [
             {
                 thumb: "https://storage.googleapis.com/imagesg/festivals/makarsankranti/400w/makrsankranti-village.png",
@@ -403,13 +582,10 @@
 
         // Populate Gallery
         const container = document.getElementById('gallery-container');
-        
         wallpaperData.forEach(item => {
             const div = document.createElement('div');
             div.className = "masonry-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 group cursor-pointer border border-emerald-100";
-            // On click, pass the FULL image URL to the modal [cite: 1]
             div.onclick = () => openModal(item.full);
-            
             div.innerHTML = `
                 <div class="relative overflow-hidden">
                     <img src="${item.thumb}" alt="Makar Sankranti Wallpaper" loading="lazy" class="w-full h-auto card-zoom">
@@ -430,9 +606,9 @@
 
         function openModal(fullUrl) {
             modalImg.src = fullUrl;
-            downloadBtn.href = fullUrl; // Link to download the high-res image [cite: 1]
+            downloadBtn.href = fullUrl;
             modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
@@ -445,6 +621,82 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeModal();
         });
+
+        // Copy helpers
+        async function copyText(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (e) {
+                const temp = document.createElement('textarea');
+                temp.value = text;
+                temp.style.position = 'fixed';
+                temp.style.left = '-9999px';
+                document.body.appendChild(temp);
+                temp.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(temp);
+                return ok;
+            }
+        }
+
+        // Wishes
+        async function copyWish(btn) {
+            const text = btn.getAttribute('data-text') || btn.textContent.trim();
+            const ok = await copyText(text);
+            const toast = document.getElementById('wishes-toast');
+            if (ok) {
+                toast.textContent = 'Copied!';
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 900);
+            }
+        }
+
+        async function copyAllWishes() {
+            const wishes = Array.from(document.querySelectorAll('#wishes [data-text]'))
+                .map(el => el.getAttribute('data-text'))
+                .filter(Boolean)
+                .join('\n');
+            const ok = await copyText(wishes);
+            const toast = document.getElementById('wishes-toast');
+            if (ok) {
+                toast.textContent = 'All wishes copied!';
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 1100);
+            }
+        }
+
+        // Stories
+        async function copyStory(btn) {
+            const text = btn.getAttribute('data-text') || '';
+            if (!text) return;
+            const ok = await copyText(text);
+            const toast = document.getElementById('stories-toast');
+            if (ok) {
+                toast.textContent = 'Copied!';
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 900);
+            }
+        }
+
+        // Food
+        async function copyFoodLine() {
+            const text = 'Til + Gud: Stay warm, stay strong, and speak sweetly—even in difficult times. “Tilgul ghya, god god bola.”';
+            const ok = await copyText(text);
+            const toast = document.getElementById('food-toast');
+            if (ok) {
+                toast.textContent = 'Copied!';
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 900);
+            }
+        }
+
+        window.closeModal = closeModal;
+        window.copyWish = copyWish;
+        window.copyAllWishes = copyAllWishes;
+        window.copyStory = copyStory;
+        window.copyFoodLine = copyFoodLine;
     </script>
+
 
 </body></html>
